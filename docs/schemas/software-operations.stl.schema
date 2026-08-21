@@ -14,11 +14,12 @@ schema SoftwareOperations v1.0 {
 
     modifier {
         required: [relation]
-        optional: [severity, status, value, unit, threshold, environment, source, time, timestamp, description, service_name]
+        optional: [severity, status, outcome, value, unit, threshold, environment, source, time, timestamp, description, service_name]
 
         relation: enum("runs_as", "runs_on", "observes", "measures", "emits", "monitors", "triggers", "violates", "causes", "affects", "mitigates", "resolves")
         severity: enum("critical", "high", "medium", "low", "info")
         status: string
+        outcome: enum("pass", "fail", "warn", "skip", "blocked", "pending", "no_change")
         value: string
         unit: string
         threshold: string

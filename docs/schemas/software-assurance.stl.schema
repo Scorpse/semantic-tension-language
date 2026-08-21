@@ -14,13 +14,14 @@ schema SoftwareAssurance v1.0 {
 
     modifier {
         required: [relation]
-        optional: [severity, likelihood, impact, status, source, identifier, version, timestamp, description, spdx_id, license_expression, cve, cwe, sarif_rule, purl]
+        optional: [severity, likelihood, impact, status, outcome, source, identifier, version, timestamp, description, spdx_id, license_expression, cve, cwe, sarif_rule, purl]
 
         relation: enum("threatens", "affects", "detects", "reports", "mitigates", "protects", "satisfies", "violates", "licensed_under", "contains", "derived_from", "attests", "processes", "stores", "transfers", "retains")
         severity: enum("critical", "high", "medium", "low", "info")
         likelihood: float(0.0, 1.0)
         impact: float(0.0, 1.0)
         status: string
+        outcome: enum("pass", "fail", "warn", "skip", "blocked", "pending", "no_change")
         source: string
         identifier: string
         version: string
