@@ -6,7 +6,7 @@
 [Software:Component_Auth] -> [Software:DataStore_Customers] ::mod(relation="reads")
 
 # Verification and delivery
-[Delivery:Test_Login] -> [Software:Endpoint_Login] ::mod(relation="tests", status="passing")
+[Delivery:Test_Login] -> [Software:Endpoint_Login] ::mod(relation="tests", outcome="pass", status="passing")
 [Delivery:Pipeline_Main] -> [Delivery:Build_42] ::mod(relation="builds", commit="abc1234")
 [Delivery:Build_42] -> [Delivery:Artifact_API] ::mod(relation="produces", version="1.0.0")
 [Delivery:Deployment_Production] -> [Delivery:Artifact_API] ::mod(relation="deploys")

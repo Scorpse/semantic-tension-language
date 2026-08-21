@@ -14,7 +14,7 @@ schema SoftwareCore v1.0 {
 
     modifier {
         required: [relation]
-        optional: [confidence, source, description, technology, protocol, version, status, criticality, author, timestamp, purl, operation_id]
+        optional: [confidence, source, description, technology, protocol, version, status, outcome, criticality, author, timestamp, purl, operation_id]
 
         relation: enum("owns", "requires", "implements", "contains", "depends_on", "calls", "exposes", "reads", "writes", "documents", "supersedes")
         confidence: float(0.0, 1.0)
@@ -24,6 +24,7 @@ schema SoftwareCore v1.0 {
         protocol: string
         version: string
         status: string
+        outcome: enum("pass", "fail", "warn", "skip", "blocked", "pending", "no_change")
         criticality: enum("critical", "high", "medium", "low")
         author: string
         timestamp: datetime
