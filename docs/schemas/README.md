@@ -2,7 +2,7 @@
 
 > **Version**: 1.0
 > **Status**: Active
-> **Last Updated**: 2026-08-19
+> **Last Updated**: 2026-08-21
 
 ## Overview
 
@@ -12,6 +12,11 @@ document structures are valid for a particular domain.
 
 Schemas are **protocol-level documents** — they constrain how knowledge is
 structured within a domain, not the knowledge itself.
+
+The maintained parser and schema validator live in
+[scos-lab/STL-TOOLS](https://github.com/scos-lab/STL-TOOLS). The local
+`parser/` directory is a frozen 1.7.x reference snapshot; profile manifests,
+typed edges, and strict schema behavior require the maintained 1.9+ tooling.
 
 ## Directory Structure
 

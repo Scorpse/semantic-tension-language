@@ -1,5 +1,9 @@
 # API: schema
 
+> The maintained implementation is provided by
+> [scos-lab/STL-TOOLS](https://github.com/scos-lab/STL-TOOLS) 1.9+.
+> The `parser/` directory in this repository is a frozen 1.7.x snapshot.
+
 Domain-specific schema validation for STL documents.
 
 **Module:** `stl_parser.schema`
