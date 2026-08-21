@@ -63,6 +63,8 @@ Routing uses the source namespace first. For an unnamespaced source, exactly one
 
 Software profiles declare typed `edge` rules; an unlisted source-prefix, relation, and target-prefix triple produces `E611`. Statement counts apply per routed profile, while cycle policy and the strictest chain limit apply to the complete graph. Optional interoperable fields cover Package URLs, SPDX/license expressions, CVE/CWE, OpenAPI operation IDs, Git commits, SLSA provenance, service names, SARIF rules, and artifact URIs.
 
+Use `outcome` for machine decisions: `pass`, `fail`, `warn`, `skip`, `blocked`, `pending`, or `no_change`. Keep `status` as descriptive detail; consumers must not infer outcomes from status substrings.
+
 ## Legal and software governance
 
 The legal schema remains general-purpose. Version 1.1 adds contracts, licenses, policies, standards, consent, permissions, prohibitions, exceptions, jurisdictions, and interpretations. It also adds legal status and effective-date metadata.
